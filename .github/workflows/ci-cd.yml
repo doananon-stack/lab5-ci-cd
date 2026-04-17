@@ -36,7 +36,7 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
 
       - name: Build Docker image
-        run: docker build -t doananon-stack/my-app:latest .
+        run: docker build -t doananon/my-app:latest .
 
       - name: Push Docker image
-        run: docker push doananon-stack/my-app:latest
+        run: docker push doananon/my-app:latest

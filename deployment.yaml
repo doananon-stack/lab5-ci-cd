@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: my-app
-          image: doananon-stack/my-app:latest
+          image: doananon/my-app:latest
           ports:
             - containerPort: 8080
