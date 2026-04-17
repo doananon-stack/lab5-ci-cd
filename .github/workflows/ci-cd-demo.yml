@@ -1,0 +1,31 @@
+name: CI/CD Demo Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Build project (simulated)
+        run: echo "Maven build simulated"
+
+      - name: Run tests (simulated)
+        run: echo "Tests simulated"
+
+      - name: Package artifact (simulated)
+        run: echo "Artifact packaged"
+
+      - name: Deploy to Kubernetes (simulated)
+        run: echo "Deployment simulated to namespace lab5"
